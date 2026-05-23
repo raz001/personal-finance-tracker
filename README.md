@@ -8,6 +8,19 @@ A full-stack personal finance web app built with React, Node.js, and MongoDB. Tr
 
 ---
 
+## 🚀 Live Demo
+
+**[https://personal-finance-tracker-pi.vercel.app](https://personal-finance-tracker-pi.vercel.app)**
+
+Try it instantly with the demo account — no sign-up needed:
+
+| Field | Value |
+|---|---|
+| Email | `demo@finio.app` |
+| Password | `demo1234` |
+
+---
+
 ## ✨ Features
 
 - **JWT Authentication** — register and login with bcrypt-hashed passwords and stateless JWT sessions
@@ -227,7 +240,23 @@ VITE_API_BASE_URL=https://your-finio-api.railway.app
 
 ## 📸 Screenshots
 
-> Add screenshots here after deployment.
+### Landing page
+![Landing page](screenshots/landing.png)
+
+### Register
+![Register page](screenshots/register.png)
+
+### Dashboard (light mode)
+![Dashboard with expenses](screenshots/dashboard.png)
+
+### Dashboard (dark mode)
+![Dashboard dark mode](screenshots/dashboard-dark.png)
+
+### AI spending insight
+![AI insight](screenshots/ai-insight.png)
+
+### Account settings
+![Account page](screenshots/account.png)
 
 ---
 
