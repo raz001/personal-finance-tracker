@@ -100,7 +100,7 @@ finio/
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/finio.git
+git clone https://github.com/your-username/personal-finance-tracker.git
 cd finio
 ```
 
@@ -123,7 +123,7 @@ cp server/.env.example server/.env
 Open `server/.env` and fill in your values:
 
 ```env
-MONGO_URI=mongodb+srv://<user>:<password>@cluster.mongodb.net/finio
+MONGO_URI=mongodb+srv://<user>:<password>@cluster.mongodb.net/personal-finance-tracker
 JWT_SECRET=replace_with_a_long_random_string
 GEMINI_API_KEY=your_gemini_api_key_here   # leave blank to use local fallback
 CLIENT_ORIGIN=http://localhost:5173
