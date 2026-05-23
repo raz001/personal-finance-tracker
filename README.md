@@ -100,7 +100,7 @@ finio/
 
 ```bash
 git clone https://github.com/your-username/personal-finance-tracker.git
-cd finio
+cd personal-finance-tracker
 ```
 
 ### 2. Install dependencies
