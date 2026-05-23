@@ -60,7 +60,7 @@ Try it instantly with the demo account — no sign-up needed:
 ## 📁 Project Structure
 
 ```
-finio/
+personal-finance-tracker/
 ├── client/                     # React / Vite frontend
 │   ├── index.html
 │   ├── vite.config.js
