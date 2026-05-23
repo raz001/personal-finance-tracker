@@ -1,0 +1,38 @@
+git add .gitignore# ── Dependencies ────────────────────────────────────────────
+node_modules/
+
+# ── Environment variables (never commit secrets) ────────────
+.env
+.env.local
+.env.*.local
+
+# ── Build output ─────────────────────────────────────────────
+dist/
+build/
+
+# ── Logs ─────────────────────────────────────────────────────
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ── OS files ─────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Editor / IDE ─────────────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# ── Vite / build cache ───────────────────────────────────────
+.vite/
+*.local
+
+# ── Test coverage ────────────────────────────────────────────
+coverage/
