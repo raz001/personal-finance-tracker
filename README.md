@@ -5,7 +5,6 @@ A full-stack personal finance web app built with React, Node.js, and MongoDB. Tr
 ![Tech Stack](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white&style=flat-square)
 ![Node.js](https://img.shields.io/badge/Node.js-Express-339933?logo=node.js&logoColor=white&style=flat-square)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Mongoose-47A248?logo=mongodb&logoColor=white&style=flat-square)
-![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)
 
 ---
 
