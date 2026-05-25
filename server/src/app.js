@@ -2,6 +2,7 @@ import cors from "cors";
 import express from "express";
 import helmet from "helmet";
 import authRoutes from "./routes/authRoutes.js";
+import budgetRoutes from "./routes/budgetRoutes.js";
 import expenseRoutes from "./routes/expenseRoutes.js";
 import financeRoutes from "./routes/financeRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
@@ -38,6 +39,7 @@ app.get("/api/health", (_req, res) => {
 });
 
 app.use("/api/auth", authRoutes);
+app.use("/api/budgets", budgetRoutes);
 app.use("/api/expenses", expenseRoutes);
 app.use("/api/finance", financeRoutes);
 app.use("/api/user", userRoutes);

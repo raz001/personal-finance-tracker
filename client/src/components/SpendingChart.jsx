@@ -8,7 +8,6 @@ const groupByCategory = (expenses) => {
     acc[expense.category] = (acc[expense.category] || 0) + Number(expense.amount);
     return acc;
   }, {});
-
   return Object.entries(totals)
     .map(([name, value]) => ({ name, value }))
     .sort((a, b) => b.value - a.value);
@@ -19,21 +18,9 @@ const CustomTooltip = ({ active, payload }) => {
   const { name, value } = payload[0].payload;
   const { color } = getCategoryMeta(name);
   return (
-    <div
-      style={{
-        background: "var(--color-surface)",
-        border: "1px solid var(--color-border)",
-        borderRadius: "var(--radius-md)",
-        boxShadow: "var(--shadow-md)",
-        padding: "0.6rem 0.9rem"
-      }}
-    >
-      <p style={{ color: "var(--color-text-muted)", fontSize: "0.75rem", margin: "0 0 0.2rem", fontWeight: 600 }}>
-        {name}
-      </p>
-      <p style={{ color, fontSize: "1rem", fontWeight: 700, margin: 0 }}>
-        {formatCurrency(value)}
-      </p>
+    <div className="bg-surface border border-border rounded-md shadow-md px-[0.9rem] py-[0.6rem]">
+      <p className="text-text-muted text-[0.75rem] font-semibold mb-[0.2rem] m-0">{name}</p>
+      <p className="text-[1rem] font-bold m-0" style={{ color }}>{formatCurrency(value)}</p>
     </div>
   );
 };
@@ -42,14 +29,14 @@ const SpendingChart = ({ expenses }) => {
   const data = groupByCategory(expenses);
 
   return (
-    <section className="panel chart-panel">
-      <div className="panel-heading">
+    <section className="bg-surface border border-border rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow duration-[160ms]">
+      <div className="flex items-center justify-between gap-4 mb-5">
         <div>
-          <p className="eyebrow">
+          <p className="inline-flex items-center gap-[0.35rem] text-primary text-[0.7rem] font-bold tracking-[0.08em] uppercase mb-[0.3rem]">
             <PieChartIcon size={11} />
             Breakdown
           </p>
-          <h2>Spending chart</h2>
+          <h2 className="text-[1.1rem] font-bold tracking-[-0.01em] m-0">Spending chart</h2>
         </div>
       </div>
 
@@ -75,20 +62,16 @@ const SpendingChart = ({ expenses }) => {
               iconType="circle"
               iconSize={8}
               formatter={(value) => (
-                <span style={{ color: "var(--color-text-muted)", fontSize: "0.8rem" }}>
-                  {value}
-                </span>
+                <span className="text-text-muted text-[0.8rem]">{value}</span>
               )}
             />
           </PieChart>
         </ResponsiveContainer>
       ) : (
-        <div className="empty-chart">
-          <div style={{ textAlign: "center" }}>
-            <PieChartIcon size={32} style={{ color: "var(--color-text-subtle)", marginBottom: "0.5rem" }} />
-            <p style={{ margin: 0, color: "var(--color-text-muted)", fontSize: "0.9rem" }}>
-              Add an expense to see the breakdown
-            </p>
+        <div className="flex items-center justify-center border border-dashed border-border-strong rounded-md min-h-[280px] text-text-muted">
+          <div className="text-center">
+            <PieChartIcon size={32} className="text-text-subtle mb-2 mx-auto" />
+            <p className="m-0 text-[0.9rem]">Add an expense to see the breakdown</p>
           </div>
         </div>
       )}

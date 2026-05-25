@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-// Apply the saved theme before the first render to avoid a flash of wrong theme
 const applyStoredTheme = () => {
   const stored = localStorage.getItem("finioTheme");
   const prefersDark = window.matchMedia?.("(prefers-color-scheme: dark)").matches;
