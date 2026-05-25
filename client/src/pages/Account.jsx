@@ -12,7 +12,7 @@ import { logout, updateProfile } from "../features/auth/authSlice.js";
 import api, { getApiError } from "../api/axios.js";
 
 const inputIconWrap = "relative";
-const inputWithIcon = "pl-[2.4rem]";
+const inputWithIcon = "pl-[2.4rem] py-[0.6rem] pr-[0.75rem] text-[0.9rem]";
 const iconCls = "absolute left-[0.8rem] top-1/2 -translate-y-1/2 pointer-events-none text-text-subtle transition-colors duration-[160ms]";
 const primaryBtn = "inline-flex items-center justify-center gap-2 min-h-[40px] px-4 py-[0.55rem] rounded-md font-semibold bg-primary text-white shadow-sm hover:bg-primary-hover hover:-translate-y-px hover:shadow-md active:translate-y-0 disabled:opacity-55 disabled:cursor-not-allowed transition-all duration-[160ms] whitespace-nowrap";
 const ghostBtn = "inline-flex items-center justify-center gap-2 min-h-[40px] px-4 py-[0.55rem] rounded-md font-semibold bg-surface-2 text-text-base border border-border hover:bg-surface-hover hover:border-border-strong transition-colors duration-[160ms] whitespace-nowrap";

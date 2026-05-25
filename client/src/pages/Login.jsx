@@ -6,7 +6,7 @@ import { clearAuthError, loginUser } from "../features/auth/authSlice.js";
 import ThemeToggle from "../components/ThemeToggle.jsx";
 
 const inputIconWrap = "relative";
-const inputWithIcon = "pl-[2.4rem]";
+const inputWithIcon = "pl-[2.4rem] py-[0.6rem] pr-[0.75rem] text-[0.9rem]";
 const iconCls = "absolute left-[0.8rem] top-1/2 -translate-y-1/2 pointer-events-none text-text-subtle transition-colors duration-[160ms]";
 
 const Login = () => {
